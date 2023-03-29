@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 def preprocess_data(data):
     # Extract the features from the JSON data
-    features = [data['temperature'], data['pressure'], data['flowrate'], data['volume'], data['n1'], data['n2'], data['n3']]
+    features = [data['pressure'], data['flowrate'], data['volume'], data['n1'], data['n2'], data['n3']]
     # Convert the features to a 2D list
     features_2d = [features]
     return features_2d
