@@ -8,6 +8,10 @@ model = joblib.load('trained_rf_model.pkl')
 
 app = Flask(__name__)
 
+@app.route('/detect_leak')
+def home():
+    return "Prediction API, Model trained with random forest"
+    
 def preprocess_data(data):
     # Extract the features from the JSON data
     features = [data['pressure'], data['flowrate'], data['volume'], data['n1'], data['n2'], data['n3']]
